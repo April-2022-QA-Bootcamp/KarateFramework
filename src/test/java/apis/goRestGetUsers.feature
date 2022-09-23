@@ -1,8 +1,8 @@
 Feature: gorest Get Users api validation
 
   Background: 
-    * def baseUrl = 'https://gorest.co.in'
-    * def getUsersPath = '/public/v2/users'
+    * def baseUrl = goRestBaseUri
+    * def getUsersPath = getUsersPath
 
   @sample
   Scenario: A sample karate scenario
@@ -24,13 +24,13 @@ Feature: gorest Get Users api validation
     When method get
     Then status 200
 
-	@getUser
+  @getUser
   Scenario: find specific user
     Given url baseUrl
     And path getUsersPath + '/98'
     When method Get
     Then status 200
-    
+
   @negative
   Scenario: find specific user
     Given url baseUrl
