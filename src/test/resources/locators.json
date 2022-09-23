@@ -1,0 +1,5 @@
+{
+	"searchInput" : "#twotabsearchtextbox",
+	"searchButton" : "#nav-search-submit-button",
+	"itemCount":"//span[contains(text(),'iphone 14 pro max')]/parent::div/span[1]"
+}
